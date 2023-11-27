@@ -1,0 +1,36 @@
+/* ----add product css -----  */
+.addproduct-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+   
+    margin-bottom: -23px;
+    padding: 10px 20px;
+    background-color:rgb(38, 136, 175);
+    border-radius: 10px;
+    
+ }
+ .addproduct-form input{
+    margin-top:8px;
+     padding: 7px 20px;
+     outline: none;
+     font-size: 16px;
+     border: none;
+     border-bottom: 1px solid rgb(12, 12, 12);
+     border-radius: 20px;
+     color: #444141;
+ }
+ 
+ 
+ .addproduct-form button{
+     width: 40%;
+     color: #fff;
+     margin: auto;
+ }
+ /* ---------basic media query------- */
+ @media screen and (max-width:600px) {
+     .addproduct-form{
+         width: 96%;
+     }
+ }
