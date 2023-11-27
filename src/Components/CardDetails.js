@@ -51,8 +51,7 @@ const CardsDetails = (props) => {
 
           <div className='container mt-3 w-75'>
               <p className='text-secondary'>{viewItm.overview}</p>
-              <h5 className='text-danger text-center mb-3'>Similar Receipies   ☟</h5>
-          
+              
           </div>
     </div>
   )
