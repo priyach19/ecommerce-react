@@ -7,7 +7,8 @@ const INIT_STATE = {
         ? JSON.parse(localStorage.getItem("cartItems"))
         : [],
     cartTotalQuantity: 0,
-    cartTotalAmount : 0
+    cartTotalAmount : 0,
+    orderStatus:false
 };
 
 // CARTSLICE for creating action on every Reducer
@@ -87,14 +88,19 @@ const cartSlice = createSlice({
                 position: "bottom-left",
             });
         },
+        placeOrder:(state,action)=>{
+            console.log('placing order');
+            state.cartItems=[];
+            localStorage.removeItem('cartItems');
+            localStorage.clear();
+            toast.success("Order Placed Successfully!",{position:"bottom-right"});
+
+        }
        
-
-
-
     }
 });
 
 //action creators are generated for each case reducer function
-export const { addCart, removeFromCart, decreaseCart , getTotals , clearCart} = cartSlice.actions;
+export const { addCart, removeFromCart, decreaseCart , getTotals , clearCart,placeOrder} = cartSlice.actions;
 
 export default cartSlice.reducer;

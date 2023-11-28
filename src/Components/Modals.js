@@ -2,19 +2,19 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useEffect } from "react";
 import Table from "react-bootstrap/Table";
-
+import { MdDeleteForever } from "react-icons/md"
 import Ratings from "./Ratings";
 //getting cart item
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 // Import Reducer Functions
-
 import {
   removeFromCart,
   decreaseCart,
   addCart,
   clearCart,
   getTotals,
+  placeOrder
 } from "../store/cartSlice";
 
 function OrderModal(props) {
@@ -43,7 +43,9 @@ function OrderModal(props) {
   const clearCartItem = () => {
     dispatch(clearCart());
   };
-
+  const placeYourOrder=()=>{
+    dispatch(placeOrder())
+  }
   return (
     <Modal
       {...props}
@@ -61,7 +63,7 @@ function OrderModal(props) {
       {/* modal body  */}
       <Modal.Body>
         {
-          // we simply map over array object and find propert value of each object //
+          //  mapping array object and find product value 
           cart.cartItems.map((element) => {
             return (
               <div key={element.id}>
@@ -73,7 +75,7 @@ function OrderModal(props) {
 
                     {/* table for item description  */}
                     <div className="details">
-                      {/* react-bootstrap table component  */}
+                    
                       <Table>
                         <tr>
                           <td style={{ color: "#033fff" }}>
@@ -126,14 +128,14 @@ function OrderModal(props) {
                            <tr>
                             <p onClick={() => removeFromCartFn(element)}>
                                <span>
-                                <i
+                                <MdDeleteForever
                                   className="fas fa-trash"
                                   style={{
                                     color: "red",
                                     fontSize: 20,
                                     cursor: "pointer",
                                   }}
-                                ></i>{" "}
+                                ></MdDeleteForever>{" "}
                               </span>
                             </p>
                             </tr>
@@ -150,13 +152,13 @@ function OrderModal(props) {
       {/* modal footer  */}
       <Modal.Footer className="d-flex justify-content-between">
         <Button className="btn modal-btn" onClick={() => clearCartItem()}>
-          Clear Cart
+          Empty Cart
         </Button>
         <div style={{ color: "blue", fontSize: 20 }}>
           <strong>Total payable Amount</strong> : ₹ {cart.cartTotalAmount}
         </div>
-        <Button onClick={props.onHide} className="btn modal-btn">
-          Close
+        <Button onClick={() => placeYourOrder()} className="btn modal-btn">
+          Place Order
         </Button>
       </Modal.Footer>
     </Modal>

@@ -52,7 +52,7 @@ const AddProduct = () => {
                     <input type="text" placeholder="set price of item.. ₹" onChange={(e) => setPrice(e.target.value)} required />
                     <input type="text" placeholder='Image URL' onChange={(e) => setUrlImage(e.target.value)} />
               
-              <button type="submit" class="btn modal-btn">Add a New Dish</button>
+              <button type="submit" className="btn modal-btn">Add a New Dish</button>
           </form>
     </div>
         </div>

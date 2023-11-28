@@ -10,11 +10,12 @@ import { addCart } from '../store/cartSlice';
 
 const CardsDetails = (props) => {
     const dispatch = useDispatch();
-    // -------now subscribe the data(added to cart data) --------------//
-    const viewItm = useSelector((state) => state.products.itemToDisplay)
-    // --------Function for Add to Cart-------------------//
+    //  use data(added to cart data)
+    const viewItem = useSelector((state) => state.products.itemToDisplay)
+    
+    //handle cart function
     const addCartHandle = (element) => {
-        // ======Add this element in redux store======//
+       //adding in store
         dispatch(addCart(element));
     }
 
@@ -24,7 +25,7 @@ const CardsDetails = (props) => {
           <section className='container mt-2'>
               <div className="itemsdetails">
                   <div className="items__img">
-                      <img src={viewItm.imgdata} alt="" />
+                      <img src={viewItem.imgdata} alt="" />
                   </div>
                   {/* table for item description  */}
                   <div className="details">
@@ -32,16 +33,19 @@ const CardsDetails = (props) => {
                       <Table>
                           <tr>
                               <td style={{color:"#fff"}}>
-                                  <p> <strong>Restaurant</strong>  : {viewItm.rname} </p>
-                                  <p><small>{viewItm.name }</small></p>
-                                  <p> <strong>Price</strong>  : ₹ {viewItm.price }</p>
-                                  <p> <strong>Address</strong>  : {viewItm.address}</p>
+                                  <p> <strong>Restaurant</strong>  : {viewItem.rname} </p>
+                                  <p><small>{viewItem.name }</small></p>
+                                  <p> <strong>Price</strong>  : ₹ {viewItem.price }</p>
+                                  <p> <strong>Address</strong>  : {viewItem.address}</p>
                               </td>
                               <td style={{ color: "#fff" }}>
-                                  <p><strong>Rating :</strong> <Ratings value={viewItm.rating} /></p>
-                                  <p><strong>Order Review :</strong> <span >{viewItm.somedata}</span></p>
+                                  <p><strong>Rating :</strong> <Ratings value={viewItem.rating} /></p>
+                                  <p><strong>Order Review :</strong> <span >{viewItem.somedata}</span></p>
                                   <p>☟</p>
-                                  <button className='carddetailbtn bg-secondary' onClick={() => addCartHandle(viewItm)}>Add To Cart</button>
+                                  <button className='
+                                  
+                                  
+                                  detailbtn bg-secondary' onClick={() => addCartHandle(viewItem)}>Add To Cart</button>
                               </td>
                           </tr>
                       </Table>
@@ -50,7 +54,7 @@ const CardsDetails = (props) => {
           </section>
 
           <div className='container mt-3 w-75'>
-              <p className='text-secondary'>{viewItm.overview}</p>
+              <p className='text-secondary'>{viewItem.overview}</p>
               
           </div>
     </div>

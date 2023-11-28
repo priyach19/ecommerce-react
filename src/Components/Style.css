@@ -1,127 +1,154 @@
-.card_style{
+/* CSS for card component */
+.card_style {
     cursor: pointer;
     transition: .3s;
     background-color: rgba(123, 156, 221, 0.92)
-    /* box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.082); */
 }
-  
-  .smalltrash{
-      display: none;
-  }
-  
-  .card_style:hover{
-    background-color:beige;
-     box-shadow: 2px 2px 5px 2px rgba(75, 73, 73, 0.082);
-  }
-  
-  .itemsdetails{
-      max-width: 800px;
-      background-color: rgba(199, 208, 208, 0.788);
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-radius: 10px;
-      box-shadow: 2px -2px 4px rgba(255, 117, 117, 0.418),1px 2px 6px rgba(168, 55, 55, 0.397);
-  }
-  .items__img{
-      flex:.4;
-  }
-  .items__img img{
-      width: 20rem;
-      max-height: 18rem;
-      border-radius: 5px;
-  }
-  .carddetailbtn{
+
+.smalltrash {
+    display: none;
+}
+
+.card_style:hover {
+    background-color: beige;
+    box-shadow: 2px 2px 5px 2px rgba(75, 73, 73, 0.082);
+}
+
+/* CSS for sort button  */
+.sortbtn {
+    width: 140px;
+    padding: 2px 15px;
+    background-color: rgb(41, 81, 212);
+    color: #fff;
+    border-radius: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#cancel {
+    background-color: rgb(231, 18, 18);
+    padding: 0px 5px;
+    border-radius: 40%;
+}
+
+.sortSpan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemsdetails {
+    max-width: 800px;
+    background-color: rgba(199, 208, 208, 0.788);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 2px -2px 4px rgba(255, 117, 117, 0.418), 1px 2px 6px rgba(168, 55, 55, 0.397);
+}
+
+.items__img {
+    flex: .4;
+}
+
+.items__img img {
+    width: 20rem;
+    max-height: 18rem;
+    border-radius: 5px;
+}
+
+.detailbtn {
     width: 95%;
     color: #fff;
-   border-radius: 30px;
-   border: 1px solid #fff;
-  }
-  .carddetailbtn:hover{
+    border-radius: 30px;
+    border: 1px solid #fff;
+}
+
+.detailbtn:hover {
     border-color: rgb(33, 33, 43);
     color: rgb(44, 44, 65);
-  }
-  .details{
-      flex: .6;
-  };
-  
-  .rating{
-      background-color: green;
-  }
- 
-  #cross{
+}
+
+.details {
+    flex: .6;
+}
+
+;
+
+.rating {
+    background-color: green;
+}
+
+#cross {
     background-color: rgb(112, 6, 6);
     padding: 0px 5px;
     border-radius: 40%;
-  }
- 
-  @media screen and (max-width:772px){
-      .itemsdetails{
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-      }
-  }
+}
 
-  .btn{
-    background-color:rgb(40, 40, 229);
-  }
-  .modal-btn:hover{
-    background-color:#fff;
+@media screen and (max-width:772px) {
+    .itemsdetails {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn {
+    background-color: rgb(40, 40, 229);
+}
+
+.modal-btn:hover {
+    background-color: #fff;
     color: #20c7dd;
     border: 1px solid #160d0c;
 
-  }
-  .lnk:hover{
-   border-radius: 20px;
-    border-bottom: 1px solid #fff;
-  }
-
-.fa-cart-shopping{
-    padding-bottom: 8px;
-    border-radius: 10px;
-}
-.fa-cart-shopping:hover{
-    border-bottom: 1px solid #fff;
 }
 
+.lnk:hover {
+    /* border-bottom: 1px solid #fff; */
+    background-color: rgb(106, 171, 214);
+    border-radius: 30px;
+}
 
-.update-modal__flex{
+.update-modal {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items:flex-start;
+    align-items: flex-start;
     gap: 5px;
 }
-.update-modal__flex input{
+
+.update-modal input {
     width: 100%;
     outline: none;
-    border: none;
     border: 1px solid #1164e08e;
     /* border-bottom: 1px inset #1164e08e; */
     padding-left: 10px;
-    color:blue;
+    color: blue;
 }
-  
-  @media screen and (max-width:450px){
-      .smalltrash{
-          display: block;
-      }
-      .largetrash{
-          display:none;
-      }
-      .emptycart_img{
-          margin-right: 50px;
-      }
-      .smallclose{
-          display: none;
-      }
-  
-      /* individual iteams details */
-     
-      .items_img img{
-          width: 16rem;
-      }
-      
-  }
+
+@media screen and (max-width:450px) {
+    .smalltrash {
+        display: block;
+    }
+
+    .largetrash {
+        display: none;
+    }
+
+    .emptycart_img {
+        margin-right: 50px;
+    }
+
+    .smallclose {
+        display: none;
+    }
+
+    /* individual items  */
+
+    .items_img img {
+        width: 16rem;
+    }
+
+}

@@ -63,8 +63,8 @@ export const deleteCardData = (id) => async (dispatch) => {
 };
 
 
-// PRODUCT SLICE for creating action on every Reducer
-// we cant manage here asynk Thunk fn and creats extra reducer
+// product slice for creating action on every Reducer
+
 const productsSlice = createSlice({
     name: "products",
     initialState: initial_State,
@@ -128,7 +128,7 @@ const productsSlice = createSlice({
             state.error = action.payload;
         },
         // function for sorting object by price
-        sortOblect: (state, action) => {
+        sortObject: (state, action) => {
             let sortedData = state.data.sort((a, b) => a.price - b.price);
             state.data = sortedData;
             localStorage.setItem("productItems", JSON.stringify(state.data));
@@ -147,7 +147,7 @@ const productsSlice = createSlice({
 export const { setLoading, fetchDataSuccess, fetchDataFailed,
     addCardDataSuccess, addCardDataFailed,
     updateCardDataSuccess, updateCardDataFailed,
-    deleteCardDataSuccess, deleteCardDataFailed, sortOblect, productView } = productsSlice.actions;
+    deleteCardDataSuccess, deleteCardDataFailed, sortObject, productView } = productsSlice.actions;
 
 export default productsSlice.reducer;
 

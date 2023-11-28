@@ -17,6 +17,8 @@ import { addCart } from '../store/cartSlice';
 // Import ProductView Function from productSlice
 import { productView } from '../store/productSlice'; 
 import UpdateItemModal from './UpdateItemModal';
+import SortProduct from './SortProduct';
+
 
 const Cards = () => {
     const dispatch = useDispatch();
@@ -46,6 +48,7 @@ const Cards = () => {
     return (    
         !loading ? (
             <div className='container mt-2'> 
+            <div><SortProduct/></div>
                 <div className="row d-flex justify-content-center align-items-center">
                     {
                         // if data is present simply map over it //

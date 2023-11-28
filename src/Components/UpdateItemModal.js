@@ -45,7 +45,7 @@ function UpdateItemModal(props) {
                     <Modal.Title className='ms-auto'>Update Your Receipy Details</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div className="update-modal__flex">
+                    <div className="update-modal">
                         <small>Restorent name</small>
                         <input type="text" value={rname} onChange={(e) => setrName(e.target.value) } />
                         <small>Receipy name</small>

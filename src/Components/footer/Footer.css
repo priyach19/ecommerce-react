@@ -1,4 +1,4 @@
-/* ----------all footer related custom css------------------- */
+/* CSS for footer */
 footer{
     background: #033fff;
     padding: 2rem 0;
@@ -22,15 +22,7 @@ footer a:hover{
     display: inline-block;
 
 }
-.permalinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0 auto 3rem;
-    list-style: none;
 
-}
 .footer__socials{
     display: flex;
     justify-content: center;
@@ -55,33 +47,10 @@ footer a:hover{
     color: #fff;
 
 }
-.item__list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: -30px;
 
-}
-.similar-link img{
-   width: 100%; 
-   height:200px;
-   border-radius: 20px;
-}
-.parent-similar__div{
-   max-width: 200px;
-    max-height: 300PX;
-}
-.similar__price{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    color: rgb(148, 0, 0);
-}
+
 @media screen and (max-width:600px) {
-    .permalinks{
-        flex-wrap: wrap;
-        /* gap: rem; */
-    }
+
     .footer__socials{
         margin-bottom: 2.6rem;
     }

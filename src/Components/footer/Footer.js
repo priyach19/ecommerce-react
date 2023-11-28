@@ -5,16 +5,17 @@ import './Footer.css'
 import { BsFacebook } from 'react-icons/bs'
 import { GrInstagram } from 'react-icons/gr'
 import { AiFillTwitterCircle } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 
 const Footer = () => {
     return (
         <footer>
-            <a href="/" className='footer__logo'>APNA VEG HUB</a>
+            <Link to="/" className='footer__logo'>APNA VEG HUB</Link>
             <div className="footer__socials">
-                <a href="https://facebook.com/login " target='_blank' rel='noreferrer'><BsFacebook /></a>
-                <a href="https://instagram.com/login " target='_blank' rel='noreferrer'><GrInstagram /></a>
-                <a href="https://twitter.com/login" target='_blank' rel='noreferrer'><AiFillTwitterCircle /></a>
+                <Link to="https://facebook.com/login " target='_blank' rel='noreferrer'><BsFacebook /></Link>
+                <Link to="https://instagram.com/login " target='_blank' rel='noreferrer'><GrInstagram /></Link>
+                <Link to="https://twitter.com/login" target='_blank' rel='noreferrer'><AiFillTwitterCircle /></Link>
             </div>
 
             <div className="footer__copyright">
