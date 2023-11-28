@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# E-Commerce Apna Meal App:
+It is a react frontend for an ecommerce website, where we can order food you want.
+Tech stack used : React, Redux, react icons, material Ui, react bootstrap, react-toastify.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features are:
+- Navbar --> Showing  relevant navigation links and cart items count 
+- Products page --> showing list of all products from the API (using the above server). Here each product is editable by clicking on the “pencil” button and show the  
+  Alert/Notification. Each product is deletable, on clicking of the delete button you should delete the product and show some sort of Alert/Notification and having Button to add a 
+   product to cart
+- Sort button --> On clicking it should sort by “price” and show a cross button just beside it (see the sort view). On clicking the cross button remove the sort.
+- Create page --> On clicking of the Add button add the product in the DB, and show some sort of Alert/Notification
+- Product detail page --> Show all the details of a product
+- Cart page -->Show all the items in the cart
+- Handle errors and success alerts etc.
+## Commands to run the project:
+-  Install all required packages using command:
+   ```
+   npm install
+   ```
+- To run the project use command :
+   ```
+    npm start
+   ```
+## Screenshots of the website:
+- Home page:
+![Screenshot (63)](https://github.com/priyach19/ecommerce-react/assets/126319326/03402312-817b-45d8-ad5c-2932a14b339f)
 
-## Available Scripts
+- Add Product page:
+   ![Screenshot (64)](https://github.com/priyach19/ecommerce-react/assets/126319326/71d0cd1f-47f3-472d-b886-361d935f8e96)
+  
+- Card with edit and delete button
+   ![Screenshot (65)](https://github.com/priyach19/ecommerce-react/assets/126319326/60def7ff-a93b-4e1c-95ea-c3adb89c9f8a)
 
-In the project directory, you can run:
+-Detail page:
+  ![Screenshot (68)](https://github.com/priyach19/ecommerce-react/assets/126319326/40896e52-ae42-4a4d-9f41-50428d8189eb)
 
-### `npm start`
+- Update Model page:
+   ![Screenshot (66)](https://github.com/priyach19/ecommerce-react/assets/126319326/54c0f65d-15a7-4d98-bf58-8830df531d73)
+  
+- Cart page:
+   ![Screenshot (67)](https://github.com/priyach19/ecommerce-react/assets/126319326/2fce1bac-5bfd-4479-8fde-c8c664b234b7)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
